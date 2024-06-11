@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
 :root {
-  --background-color: #1e1b4b;
+  --background-color: hsl(233, 47%, 7%);
+  --card-background-color: hsl(244, 38%, 16%);
+  --card-violet-color: hsl(277, 64%, 61%);
+  --card-text-color: hsla(0, 0%, 100%, 0.75);
   --white-color: #fff;
   --light-grey: #9ca3af;
-  --card-price-color: #047857;
 }
 
 *,
@@ -24,13 +26,13 @@ body {
 }
 
 .card-container {
-  background-color: var(--white-color);
+  background-color: var(--card-background-color);
+  color: var(--white-color);
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: 70vh;
   margin: auto;
-  margin-top: 3rem;
+  margin-top: 4rem;
   max-width: 80%;
 }
 
@@ -41,6 +43,7 @@ body {
   min-height: 35vh;
   width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 .card-img-container::after {
@@ -54,35 +57,38 @@ body {
   opacity: 0.5;
 }
 
-.card-text {
+.card-body {
   margin: 0 1.2rem 0 1.2rem;
   padding: 0.2rem;
 }
 
-.card-perfume-text {
-  color: var(--light-grey);
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.4rem;
-  text-transform: uppercase;
-  padding: 0.3rem;
-  margin-top: 0.5rem;
-}
-
-.card-text h1,
+.card-body h1,
 h2 {
-  font-size: 1.9rem;
+  font-size: 2.3rem;
   font-weight: bold;
 }
-
-.card-price {
-  margin: 0 1.2rem 0 1.2rem;
+.card-content {
+  padding: 5rem;
 }
 
-.card-green-text {
-  font-size: 2rem;
+.card-violet-text {
+  color: var(--card-violet-color);
+}
+
+.card-text {
+  color: var(--card-text-color);
+}
+
+.card-stats {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.card-stats-text {
+  font-size: 1.4rem;
   font-weight: bolder;
-  color: var(--card-price-color);
 }
 
 .card-small-text {
@@ -118,7 +124,7 @@ h2 {
 /* utilities */
 
 .m-top {
-  margin-top: 0.5rem;
+  margin-top: 2rem;
 }
 
 .grey-text {
@@ -127,4 +133,15 @@ h2 {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.p-5 {
+  padding: 5rem;
+}
+
+@media (max-width: 750px) {
+  .card-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
 }
