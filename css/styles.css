@@ -144,7 +144,13 @@ body {
   .card-container {
     display: flex;
     flex-direction: column-reverse;
+    max-width: 20rem;
   }
+
+  .card-img-container {
+    border-radius: 10px 10px 0 0;
+  }
+
   .card-body h1 {
     text-align: center;
     font-size: 1.5rem;
