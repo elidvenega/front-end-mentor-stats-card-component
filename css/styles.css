@@ -19,6 +19,8 @@
 body {
   background-color: var(--background-color);
   font-family: "Titillium Web", sans-serif;
+  display: flex;
+  justify-content: center;
   line-height: 1.4;
   min-height: 100dvh;
   min-height: 100vh;
@@ -31,7 +33,7 @@ body {
   border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: auto;
+  /* margin: auto; */
   margin-top: 4rem;
   /* Changed this property */
   max-width: 70rem;
